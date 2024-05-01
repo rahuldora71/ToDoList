@@ -10,10 +10,11 @@ import java.sql.*;
  * @author rahul
  */
 public class DatabaseConnection {
+    private static final String password="dbPassword";
     public static Connection getCon(){
          try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskmanagement","root","@Dora80536190009992198674");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/taskmanagement","root","password");
             return con;
         }
         catch(Exception e){
